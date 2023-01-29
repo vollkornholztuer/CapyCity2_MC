@@ -108,6 +108,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -128,6 +129,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CapyCity2_MC.cpp" />
+    <ClCompile Include="CapycitySim.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Building.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Building.h" />
+    <ClInclude Include="CapyCity2_MC.h" />
+    <ClInclude Include="CapycitySim.h" />
+    <ClInclude Include="Material.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
